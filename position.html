@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.static {
+            position: static;
+            margin-left: 30px;
+            border: 1px solid rebeccapurple
+        }
+
+        div.relative {
+            position: relative;
+            left: 60px;
+            height: 400px;
+            border: 1px solid rebeccapurple
+        }
+
+        div.fixed {
+            position: fixed;
+            width: 300px;
+            border: 3px solid #73AD21;
+
+            bottom: 0;
+            right: 0;
+        }
+
+        div.absolute {
+            position: absolute;
+            top: 80px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+        }
+
+        div.sticky {
+            position: -webkit-sticky;
+            /* Safari */
+            position: sticky;
+            top: 0;
+            background-color: green;
+            border: 2px solid #4CAF50;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="static">static</div>
+        <div class="relative">relative </div>
+        <div class="fixed">fixed</div>
+        <div class="absolute">absolute</div>
+
+    </main>
+
+</body>
+
+</html>
