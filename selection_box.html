@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Box</title>
+    <style>
+        .selection-box {
+            position: relative;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .selected-option {
+            font-size: 16px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+
+        .options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-radius: 0 0 5px 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .option {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .option:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="selection-box" id="selectionBox">
+        <div class="selected-option" id="selectedOption">Select an option</div>
+        <div class="arrow" id="arrow">&#9660;</div>
+        <div class="options" id="options">
+            <div class="option">Option 1</div>
+            <div class="option">Option 2</div>
+            <div class="option">Option 3</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var selectionBox = document.getElementById('selectionBox');
+            var arrow = document.getElementById('arrow');
+            var options = document.getElementById('options');
+
+            selectionBox.addEventListener('click', function () {
+                if (options.style.display === 'block') {
+                    options.style.display = 'none';
+                    arrow.innerHTML = '&#9660;';
+                } else {
+                    options.style.display = 'block';
+                    arrow.innerHTML = '&#9650;';
+                }
+            });
+
+            options.addEventListener('click', (event) => {
+                let options = options
+                if (event.target.classList.contains('option')) {
+                    var selectedOption = event.target.textContent;
+                    document.getElementById('selectedOption').textContent = selectedOption;
+                    options.style.display = 'none'; // Hide options when an option is clicked
+                    arrow.innerHTML = '&#9660;';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
