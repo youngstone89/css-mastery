@@ -26,7 +26,7 @@
             transform: translateY(-50%);
         }
 
-        .options {
+        . {
             position: absolute;
             top: 100%;
             left: 0;
@@ -54,7 +54,7 @@
     <div class="selection-box" id="selectionBox">
         <div class="selected-option" id="selectedOption">Select an option</div>
         <div class="arrow" id="arrow">&#9660;</div>
-        <div class="options" id="options">
+        <div class="" id="">
             <div class="option">Option 1</div>
             <div class="option">Option 2</div>
             <div class="option">Option 3</div>
@@ -65,24 +65,24 @@
         document.addEventListener('DOMContentLoaded', function () {
             var selectionBox = document.getElementById('selectionBox');
             var arrow = document.getElementById('arrow');
-            var options = document.getElementById('options');
+            var  = document.getElementById('');
 
             selectionBox.addEventListener('click', function () {
-                if (options.style.display === 'block') {
-                    options.style.display = 'none';
+                if (.style.display === 'block') {
+                    .style.display = 'none';
                     arrow.innerHTML = '&#9660;';
                 } else {
-                    options.style.display = 'block';
+                    .style.display = 'block';
                     arrow.innerHTML = '&#9650;';
                 }
             });
 
-            options.addEventListener('click', (event) => {
-                let options = options
+            .addEventListener('click', (event) => {
+                let = 
                 if (event.target.classList.contains('option')) {
                     var selectedOption = event.target.textContent;
                     document.getElementById('selectedOption').textContent = selectedOption;
-                    options.style.display = 'none'; // Hide options when an option is clicked
+                    .style.display = 'none'; // Hide  when an option is clicked
                     arrow.innerHTML = '&#9660;';
                 }
             });
