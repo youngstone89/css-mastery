@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="grid-container" style="display: grid">
+
+        <!-- block 그리드 아이템 -->
+        <div class="grid-item"> block </div>
+
+        <!-- float 속성 설정 무시 -->
+        <div class="grid-item" style="float: left"> float </div>
+
+        <!-- 암시적으로 블록 그리드 아이템 생성 -->
+        anonymous item 3
+
+        <!-- inline 그리드 아이템 ⟹ display:block 처리 -->
+        <span>
+            item 4
+            <!-- 그리드 아이템이 아님 -->
+            <q style="display: block" id=not-an-item> item 4 </q>
+            item 4
+        </span>
+
+    </div>
+</body>
+
+</html>

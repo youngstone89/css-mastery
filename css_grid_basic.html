@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-rows:
+                [row-1-start] 25% [row-1-end] 100px [third-line] auto [last-line];
+            grid-template-columns:
+                [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container"></div>
+</body>
+
+</html>
