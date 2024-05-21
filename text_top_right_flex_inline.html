@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superscript Example with Flexbox</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+
+            align-items: center;
+            justify-content: flex-start;
+            outline: 1px solid;
+
+        }
+
+        .unit-area {
+            display: flex;
+            flex-direction: column;
+            outline: 1px solid blue;
+            align-items: flex-start;
+        }
+
+        .superscript {
+            margin-bottom: 50%;
+            margin-left: 10%;
+            box-sizing: border-box;
+            outline: 1px solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <b class="main-text">Main asdfasdasdText</b>
+        <div class="unit-area">
+            <span class="superscript">mm</span>
+            <!-- <span class="superscript">mm</span> -->
+        </div>
+    </div>
+</body>
+
+</html>

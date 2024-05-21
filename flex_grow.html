@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            outline: 1px solid violet;
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 100px;
+            font-size: 15px;
+            align-items: normal;
+            justify-content: center;
+        }
+
+        .row {
+            outline: 1px solid blue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+        }
+
+        .item {
+            outline: 1px solid red;
+            flex-grow: 1;
+
+        }
+
+        .item-grow-3 {
+            outline: 1px solid yellowgreen;
+            flex-grow: 6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item">item</div>
+        </div>
+        <div class="row">
+            <div class="item">item</div>
+            <div class="item-grow-3">item</div>
+            <div class="item">item</div>
+        </div>
+        <div class="row">
+            <div class="item">item</div>
+            <div class="item">item</div>
+            <div class="item-grow-3">item</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
