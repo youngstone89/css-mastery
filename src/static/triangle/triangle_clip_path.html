@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: solid 1px black;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background: white;
+            opacity: 0.9;
+            z-index: 0;
+        }
+
+        .triangle-clip {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 25%;
+            left: 0px;
+            border: solid 5px black;
+            background-color: white;
+            /* Triangle color */
+            clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+            /* Upward triangle */
+            transform: translate(-55px) rotate(45deg)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="triangle-clip"></div>
+    </div>
+</body>
+
+</html>
