@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Triangle with Border</title>
+    <style>
+        .parent {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #f0f0f0;
+            /* Light gray background for visibility */
+        }
+
+        .triangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(50px, 25px) rotate(45deg);
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            /* Red fill */
+            border: 6px solid #000000;
+            /* Black border */
+            clip-path: polygon(50% 2%, 2% 98%, 98% 98%);
+            /* Inset to preserve border */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="triangle"></div>
+    </div>
+</body>
+
+</html>
